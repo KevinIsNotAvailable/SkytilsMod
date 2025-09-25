@@ -165,7 +165,7 @@ object LividFinder {
 
         for (entity in mc.theWorld.loadedEntityList) {
             if (entity !is EntityArmorStand) continue
-            if (entity.customNameTag.startsWith("$mappedColor﴾ $mappedColor§lLivid")) {
+            if (entity.customNameTag.contains("$mappedColor§lLivid")) {
                 lividTag = entity
                 livid = mc.theWorld.playerEntities.find { it.name == "$lividType Livid" }
                 foundLivid = true
