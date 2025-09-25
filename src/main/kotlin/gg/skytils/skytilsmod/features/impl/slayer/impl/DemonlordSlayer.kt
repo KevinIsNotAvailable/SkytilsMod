@@ -46,7 +46,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent
 import java.awt.Color
 
 class DemonlordSlayer(entity: EntityBlaze) :
-    ThrowingSlayer<EntityBlaze>(entity, "Inferno Demonlord", "§c☠ §bInferno Demonlord") {
+    ThrowingSlayer<EntityBlaze>(entity, "Inferno Demonlord", "§bInferno Demonlord") {
     var totemEntity: EntityArmorStand? = null
     var totemPos: BlockPos? = null
 
