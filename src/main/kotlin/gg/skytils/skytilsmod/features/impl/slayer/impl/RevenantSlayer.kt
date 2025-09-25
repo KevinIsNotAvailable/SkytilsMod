@@ -34,7 +34,7 @@ import net.minecraft.init.Blocks
 import net.minecraft.util.BlockPos
 
 class RevenantSlayer(entity: EntityZombie) :
-    Slayer<EntityZombie>(entity, "Revenant Horror", "§c☠ §bRevenant Horror", "§c☠ §fAtoned Horror") {
+    Slayer<EntityZombie>(entity, "Revenant Horror", "§bRevenant Horror", "§fAtoned Horror") {
 
     override fun set() {
         rev5PingTask.start()
