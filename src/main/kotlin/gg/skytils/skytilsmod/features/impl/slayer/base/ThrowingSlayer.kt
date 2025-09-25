@@ -30,7 +30,7 @@ import net.minecraftforge.event.entity.EntityJoinWorldEvent
  * Subtype of [Slayer]
  */
 abstract class ThrowingSlayer<T : EntityLiving>(entity: T, name: String, nameStart: String) : Slayer<T>(
-    entity, name, nameStart,
+    entity, name, nameContains,
 ) {
     var thrownLocation: BlockPos? = null
     var thrownEntity: EntityArmorStand? = null
