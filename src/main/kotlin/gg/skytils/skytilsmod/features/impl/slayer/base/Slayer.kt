@@ -39,7 +39,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent
 open class Slayer<T : EntityLivingBase>(
     val entity: T,
     private val name: String,
-    private vararg val nameStart: String,
+    private vararg val nameContains: String,
 ) {
     var nameEntity: EntityArmorStand? = null
     var timerEntity: EntityArmorStand? = null
@@ -81,7 +81,7 @@ open class Slayer<T : EntityLivingBase>(
             for (nearby in nearbyArmorStands) {
                 when {
                     nearby.displayName.formattedText.startsWith("§8[§7Lv") -> continue
-                    nameStart.any { nearby.displayName.formattedText.startsWith(it) } -> {
+                    nameContains.any { nearby.displayName.formattedText.contains(it) } -> {
                         printDevMessage(
                             { "expected tier $currentTier, hp $expectedHealth - spawned hp ${entity.baseMaxHealth.toInt()}" },
                             "slayer"
