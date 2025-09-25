@@ -39,7 +39,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent
 import kotlin.math.abs
 
 class SeraphSlayer(entity: EntityEnderman) :
-    ThrowingSlayer<EntityEnderman>(entity, "Voidgloom Seraph", "§c☠ §bVoidgloom Seraph") {
+    ThrowingSlayer<EntityEnderman>(entity, "Voidgloom Seraph", "§bVoidgloom Seraph") {
     val nukekebiSkulls = mutableListOf<EntityArmorStand>()
     var yangGlyphAdrenalineStressCount = -1L
     var lastYangGlyphSwitch = -1L
