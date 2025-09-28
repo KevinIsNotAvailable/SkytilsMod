@@ -105,8 +105,7 @@ object SlayerFeatures : CoroutineScope {
         "Atoned Champion",
         "Atoned Revenant"
     )
-    // primordial jockey renders small bounding box
-    private val SPIDER_MINIBOSSES = arrayOf("Tarantula Vermin", "Tarantula Beast", "Mutant Tarantula", "Primordial Jockey", "Primordial Viscount")
+    private val SPIDER_MINIBOSSES = arrayOf("Tarantula Vermin", "Tarantula Beast", "Mutant Tarantula", "Primordial Viscount")
     private val WOLF_MINIBOSSES = arrayOf("Pack Enforcer", "Sven Follower", "Sven Alpha")
     private val ENDERMAN_MINIBOSSES = arrayOf("Voidling Devotee", "Voidling Radical", "Voidcrazed Maniac")
     private val BLAZE_MINIBOSSES = arrayOf("Flare Demon", "Kindleheart Demon", "Burningsoul Demon")
@@ -262,7 +261,7 @@ object SlayerFeatures : CoroutineScope {
             val name = entity.displayName.unformattedText
             if (name.endsWith("❤") && !name.endsWith(" 0❤")) {
                 val (x, y, z) = RenderUtil.fixRenderPos(event.x, event.y, event.z)
-                if (ZOMBIE_MINIBOSSES.any { name.contains(it) } || BLAZE_MINIBOSSES.any { name.contains(it) }) {
+                if (ZOMBIE_MINIBOSSES.any { name.contains(it) } || BLAZE_MINIBOSSES.any { name.contains(it) } || name.contains(""Primordial Jockey")) {
                     drawOutlinedBoundingBox(
                         AxisAlignedBB(x - 0.5, y - 2, z - 0.5, x + 0.5, y, z + 0.5),
                         Color(0, 255, 255, 255),
